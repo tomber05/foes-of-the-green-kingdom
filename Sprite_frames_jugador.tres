@@ -1,0 +1,89 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://be4nn3xbmsqbj"]
+
+[ext_resource type="Texture2D" uid="uid://c1eol0dlgl3wf" path="res://assets/Spritesheets/spritesheet-characters-default.png" id="1_issb8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dy58j"]
+atlas = ExtResource("1_issb8")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18irb"]
+atlas = ExtResource("1_issb8")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3iv2r"]
+atlas = ExtResource("1_issb8")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8tvw"]
+atlas = ExtResource("1_issb8")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnk3t"]
+atlas = ExtResource("1_issb8")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx6mv"]
+atlas = ExtResource("1_issb8")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy8ic"]
+atlas = ExtResource("1_issb8")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak6in"]
+atlas = ExtResource("1_issb8")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsnyk"]
+atlas = ExtResource("1_issb8")
+region = Rect2(128, 128, 128, 128)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dy58j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18irb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3iv2r")
+}],
+"loop": true,
+"name": &"Andar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8tvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnk3t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yx6mv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy8ic")
+}],
+"loop": true,
+"name": &"correr",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ak6in")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsnyk")
+}],
+"loop": true,
+"name": &"saltar",
+"speed": 4.0
+}]
