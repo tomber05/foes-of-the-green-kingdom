@@ -18,4 +18,4 @@ func _physics_process(delta):
 		velocity.x = -_velocidad
 	else:
 		velocity.x = 0
-		move_and_slide()
+	move_and_slide()
