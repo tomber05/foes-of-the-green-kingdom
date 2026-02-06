@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://brhxhnpjtgd3e" path="res://escenas/player.gd" id="1_kclba"]
 [ext_resource type="SpriteFrames" uid="uid://be4nn3xbmsqbj" path="res://Sprite_frames_jugador.tres" id="2_kclba"]
+[ext_resource type="Material" uid="uid://cucjv101lor6y" path="res://escenas/new_shader_material.tres" id="2_v37hv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kclba"]
 size = Vector2(41, 60)
@@ -13,17 +14,19 @@ size = Vector2(40, 60)
 physics_interpolation_mode = 1
 collision_layer = 4
 script = ExtResource("1_kclba")
-animacion = NodePath("AnimatedSprite2D")
+animacion = NodePath("Animacion")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1148889722]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1332117291]
+[node name="Animacion" type="AnimatedSprite2D" parent="." unique_id=1332117291]
+material = ExtResource("2_v37hv")
 position = Vector2(-1, -46)
 scale = Vector2(0.703125, 0.703125)
 sprite_frames = ExtResource("2_kclba")
 animation = &"Andar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1161937202]
+visible = false
 position = Vector2(1.5, -32)
 shape = SubResource("RectangleShape2D_kclba")
 
@@ -32,5 +35,8 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=500181584]
+visible = false
 position = Vector2(1, -31)
 shape = SubResource("RectangleShape2D_v37hv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

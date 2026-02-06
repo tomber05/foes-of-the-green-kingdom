@@ -3,8 +3,13 @@ extends CharacterBody2D
 @export var animacion: Node
 var _velocidad: float = 200.0
 var _velocidad_salto: float = -560.0
-	
+var _muerto: bool
+
 func _physics_process(delta):
+	#muerte
+	if _muerto:
+		return
+	
 	#animaciones
 	if !is_on_floor():
 		animacion.play("saltar")
@@ -30,3 +35,9 @@ func _physics_process(delta):
 	else:
 		velocity.x = 0
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	animacion.modulate = Color(1.0, 0.0, 0.0, 1.0)
+	animacion.stop()
+	_muerto = true
