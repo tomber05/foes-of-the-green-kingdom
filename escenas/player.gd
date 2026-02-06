@@ -1,9 +1,18 @@
 extends CharacterBody2D
 
+@export var animacion: Node
 var _velocidad: float = 200.0
-var _velocidad_salto: float = -500.0
+var _velocidad_salto: float = -560.0
 	
 func _physics_process(delta):
+	#animaciones
+	if !is_on_floor():
+		animacion.play("saltar")
+	elif velocity.x !=0:
+		animacion.play("Andar")
+	else:
+		animacion.play("idle")
+	
 	#gravedad
 	velocity += get_gravity() * delta
 	
@@ -14,8 +23,10 @@ func _physics_process(delta):
 	#movimiento
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = _velocidad
+		animacion.flip_h = false
 	elif Input.is_action_pressed("ui_left"):
 		velocity.x = -_velocidad
+		animacion.flip_h = true
 	else:
 		velocity.x = 0
 	move_and_slide()
