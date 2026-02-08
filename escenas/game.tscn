@@ -7,6 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://c6cs7h3hn21m5" path="res://escenas/controles.tscn" id="5_6kmlf"]
 [ext_resource type="PackedScene" uid="uid://c2oabq25i5ngd" path="res://escenas/Player.tscn" id="29_224da"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_sa5h6"]
+font_size = 50
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.5921569)
+stacked_outline_count = 1
+stacked_outline_0/size = 20
+
 [node name="Game" type="Node2D" unique_id=746024559]
 script = ExtResource("1_6qgwm")
 
@@ -55,5 +62,16 @@ offset_left = 260.0
 offset_top = 113.0
 offset_right = 260.0
 offset_bottom = 113.0
+
+[node name="Label" type="Label" parent="." unique_id=449892815]
+offset_left = 6199.0
+offset_top = 15.000008
+offset_right = 6523.874
+offset_bottom = 181.20563
+scale = Vector2(0.9111227, 0.9746964)
+text = "Has Ganado"
+label_settings = SubResource("LabelSettings_sa5h6")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="CanvasLayer2/reinicio" to="." method="_on_reinicio_pressed"]
