@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://rnpycqec4v2j"]
+
+[ext_resource type="Script" uid="uid://dntsn11omnm0i" path="res://escenas/controlador_muerte.gd" id="1_351nb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_351nb"]
+font_size = 28
+
+[node name="Controlador_muerte" type="Control" unique_id=968252234 node_paths=PackedStringArray("label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_351nb")
+label = NodePath("Label")
+
+[node name="Label" type="Label" parent="." unique_id=866895849]
+layout_mode = 0
+offset_right = 182.20808
+offset_bottom = 61.67784
+rotation = 0.005105718
+text = "Muertes: 0"
+label_settings = SubResource("LabelSettings_351nb")
