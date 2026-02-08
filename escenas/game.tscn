@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://dcgjxk2jidl5x"]
 
+[ext_resource type="Script" uid="uid://cvfh6qqwmrp8e" path="res://escenas/game.gd" id="1_6qgwm"]
 [ext_resource type="TileSet" uid="uid://nh0dummbnau6" path="res://objetos interactuables.tres" id="1_62eqe"]
 [ext_resource type="AudioStream" uid="uid://cwsr65d8ri2s8" path="res://assets/Sounds/massobeats - ruby (freetouse.com).mp3" id="2_6qgwm"]
 [ext_resource type="PackedScene" uid="uid://rnpycqec4v2j" path="res://escenas/controlador_muerte.tscn" id="4_p8hra"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c2oabq25i5ngd" path="res://escenas/Player.tscn" id="29_224da"]
 
 [node name="Game" type="Node2D" unique_id=746024559]
+script = ExtResource("1_6qgwm")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=568218453]
 layer = -1
@@ -41,8 +43,17 @@ autoplay = true
 offset_left = 2.0
 offset_right = 2.0
 
+[node name="reinicio" type="Button" parent="CanvasLayer2" unique_id=843533108]
+offset_left = 996.0
+offset_top = 14.0
+offset_right = 1072.0
+offset_bottom = 73.0
+text = "Reiniciar"
+
 [node name="Controles" parent="." unique_id=1619080368 instance=ExtResource("5_6kmlf")]
 offset_left = 260.0
 offset_top = 113.0
 offset_right = 260.0
 offset_bottom = 113.0
+
+[connection signal="pressed" from="CanvasLayer2/reinicio" to="." method="_on_reinicio_pressed"]

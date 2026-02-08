@@ -15,6 +15,5 @@ offset_bottom = 23.0
 text = "Controles:
 Flecha derecha --> derecha
 Flecha izquierda --> izquierda
-Barra espaciadora --> Saltar
-R --> reiniciar nivel"
+Z o Flecha arriba --> Saltar"
 horizontal_alignment = 1
